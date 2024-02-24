@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GMU | Feedback Survey</title>
+
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Bootstrap Icons link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS file links -->
+  <!-- Fonts -->
+  <link rel="stylesheet" href="./css/font.css">
+  <!-- Survey Specific CSS -->
+  <link rel="stylesheet" href="./css/gmu_styles.css">
+  <!-- Theme Related CSS -->
+  <link rel="stylesheet" href="./css/theme.css">
+</head>
+
+<body class="gmu-cs-dept bg-body-tertiary">
+  <div class="container-fluid p-0">
+    <!-- Header & Navbar -->
+    <header class="header sticky-top shadow bg-gmu-green">
+      <div class="py-1 px-3 mx-auto banner" style="margin-top: -2px;">
+        <div class="container p-0 d-flex justify-content-between">
+          <div class="d-flex flex-row justify-content-start align-items-center text-white">
+            <img src="./images/logo_short.png" alt="GMU" class="logo-short">
+            <h6 class="m-0">George Mason University</h6>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-gmu-yellow px-3 py-0" style="border: 5px solid transparent;">
+        <div class="container p-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb py-2 m-0">
+              <li class="breadcrumb-item"><a
+                  href="http://svasepal-swe645-sp2024-hw1.s3-website-us-east-1.amazonaws.com">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Feedback Survey</li>
+            </ol>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="col-md-6 col-12 mx-auto px-4">
+      <h3 class="mt-4 mb-4">Feedback Survey</h3>
+      <!-- Survey Form -->
+      <form autocomplete="on" class="mb-5 survey-form needs-validation" novalidate>
+        <!-- Personal Details -->
+        <h5 class="mb-3">Personal Details</h5>
+        <div class="row mb-3 gy-3">
+          <!-- First name with autofocus -->
+          <div class="col-md-5 col-xs-12 form-field">
+            <label for="firstName" class="form-label">First name</label>
+            <input type="text" class="form-control" id="firstName" required autofocus>
+            <div class="invalid-feedback">Please enter your first name</div>
+          </div>
+          <!-- Last name -->
+          <div class="col-md-5 col-xs-12 form-field">
+            <label for="lastName" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastName" required>
+            <div class="invalid-feedback">Please enter your last name</div>
+          </div>
+        </div>
+        <hr>
+        <!-- Contact Details -->
+        <h5 class="mb-3">Contact Details</h5>
+        <div class="row mb-3 gy-3">
+          <!-- Phone number type -->
+          <div class="col-md-4 col-xs-12 form-field">
+            <label for="contactType" class="form-label">Phone number type</label>
+            <select class="form-select" id="contactType" required>
+              <option selected value="">Choose a phone type</option>
+              <option value="mobile">Mobile</option>
+              <option value="home">Home</option>
+              <option value="office">Office</option>
+            </select>
+            <div class="invalid-feedback">Please choose a phone type</div>
+          </div>
+          <!-- Phone number with pattern validation -->
+          <div class="col-md-5 col-xs-12 form-field">
+            <label for="contact" class="form-label">Phone number</label>
+            <input type="text" class="form-control" id="contact" placeholder="(222) 222-2222" required
+              pattern="^(\([0-9]{3}\)[ ]{0,1}|[0-9]{3}-)[0-9]{3}-[0-9]{4}$">
+            <div class="invalid-feedback">Please enter a valid US phone number in <wbr>"(xxx)xxx-xxxx" format</div>
+          </div>
+        </div>
+        <div class="row mb-4 gy-3">
+          <!-- Email address with email type validation -->
+          <div class="col-md-6 col-xs-12 form-field">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="yourname@example.com" required>
+            <div class="invalid-feedback">Please enter a valid email format like "youname@example.com"</div>
+          </div>
+        </div>
+        <hr>
+        <!-- Address Details -->
+        <h5 class="mb-3">Address Details</h5>
+        <div class="row mb-3 gy-3">
+          <!-- Street Address -->
+          <div class="col-md-9 col-xs-12 form-field">
+            <label for="streetAddress" class="form-label">Street address</label>
+            <input type="text" class="form-control" id="streetAddress" required>
+            <div class="invalid-feedback">Please enter your stree address</div>
+          </div>
+          <!-- Apartment Number -->
+          <div class="col-md-3 col-xs-12 form-field">
+            <label for="aptNum" class="form-label">Apt Number</label>
+            <input type="text" class="form-control" id="aptNum">
+          </div>
+        </div>
+        <div class="row mb-3 gy-3">
+          <!-- City -->
+          <div class="col-md-4 col-xs-12 form-field">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" required>
+            <div class="invalid-feedback">Please enter city name</div>
+          </div>
+          <!-- State -->
+          <div class="col-md-4 col-xs-12 form-field">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" required>
+            <div class="invalid-feedback">Please enter a state code/name</div>
+          </div>
+          <!-- Zipcode -->
+          <div class="col-md-4 col-xs-12 form-field">
+            <label for="zipCode" class="form-label">Zipcode</label>
+            <input type="text" class="form-control" id="zipCode" inputmode="numeric"
+              pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" required>
+            <div class="invalid-feedback">Please enter a valid US zipcode format</div>
+          </div>
+        </div>
+        <hr>
+        <h5 class="mb-3">Additional Questions</h5>
+        <div class="row mb-3 gy-3">
+          <div class="col-12 form-field">
+            <label class="form-label">What did you like most about the campus ?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusStudents" id="check1">
+              <label class="form-check-label" for="check1">
+                Students
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusLocation" id="check2">
+              <label class="form-check-label" for="check2">
+                Location
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusCampus" id="check3">
+              <label class="form-check-label" for="check3">
+                Campus
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusAtmosphere" id="check4">
+              <label class="form-check-label" for="check4">
+                Atmosphere
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusDorm" id="check5">
+              <label class="form-check-label" for="check5">
+                Dorm rooms
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="aboutCampusSports" id="check6">
+              <label class="form-check-label" for="check6">
+                Sports
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3 gy-3">
+          <div class="col-12 form-field">
+            <label class="form-label">How did you become interested in this university ?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="interest" id="interestRadio1">
+              <label class="form-check-label" for="interestRadio1">
+                Friends
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="interest" id="interestRadio2">
+              <label class="form-check-label" for="interestRadio2">
+                Television
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="interest" id="interestRadio3">
+              <label class="form-check-label" for="interestRadio3">
+                Internet
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="interest" id="interestRadio4">
+              <label class="form-check-label" for="interestRadio4">
+                Other
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3 gy-3">
+          <div class="col-12 form-field">
+            <label for="likelihood" class="form-label">How likely do you recommend this school to other prospective
+              students ?</label>
+            <div class="row">
+              <div class="col-md-4 col-xs-12">
+                <select class="form-select" id="likelihood" required>
+                  <option selected value="">Select an option</option>
+                  <option value="veryLikely">Very Likely</option>
+                  <option value="likely">Likely</option>
+                  <option value="unlikely">Unlikely</option>
+                </select>
+                <div class="invalid-feedback">Please select a likelihood</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3 gy-3">
+          <div class="col-12 form-field">
+            <label for="comments" class="form-label">Provide any additional comments</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+          </div>
+        </div>
+        <hr>
+        <h5 class="mb3">Raffle</h5>
+        <div class="col-12 mb-3 gy-3">
+          <label for="numbers" class="form-label">Please enter comma(,) separated numbers between 1 & 100</label>
+          <div class="col-xs-12 col-md-10 form-field">
+            <input class="form-control" type="text" name="numbers" id="numbers" />
+            <div class="invalid-feedback">Please enter atleast 10 numbers between 1 & 100 separated by comma (,)</div>
+          </div>
+        </div>
+        <button type="button" onclick="announce()"
+          class="btn btn-outline-brand mb-4 me-3 col-md-auto col-12">Announce</button>
+        <hr>
+        <h5 class="mb3">Acknowledgement</h5>
+        <div class="row mb-3 gy-3">
+          <div class="col-md-6 col-xs-12 form-field">
+            <label for="fullName" class="form-label">Please enter your full name</label>
+            <input type="text" class="form-control" id="fullName" required></input>
+            <div class="invalid-feedback">Please enter your full name</div>
+          </div>
+        </div>
+        <div class="row mb-4 gy-3">
+          <div class="col-md-3 col-xs-12 form-field">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" required></input>
+            <div class="invalid-feedback">Please choose a date</div>
+          </div>
+        </div>
+        <div class="row mb-4 gy-3">
+          <div class="col-12 form-field">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+              <label class="form-check-label" for="terms">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">Please accept the terms</div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-brand mb-4 me-3 col-md-auto col-12">Submit</button>
+        <button type="reset" class="btn btn-outline-brand mb-4 col-md-auto col-12">Cancel</button>
+      </form>
+
+      <!-- Submission Confirmation Dialog -->
+      <div class="modal fade" id="submitConfirmation">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Feedback Suvey</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="fs4">Thank you for providing feedback.</p>
+              <p class="fs5">If you have any further questions or enquires, please send us a mail to <a
+                  href="mailto:mssc@gmu.edu">mssc@gmu.edu</a> and we will try to reply as soon as we can.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark px-5 pt-4 pb-5 mt-5 position-relative">
+      <div class="container mx-auto text-white">
+        <div class="row row-cols-md-3 row-cols-xs-1">
+          <!-- University logo -->
+          <div class="col-xs-12 col-md-4 p-0">
+            <img src="./images/logo_large.png" alt="George Mason University" class="logo-large w-50">
+          </div>
+          <!-- Contact Details -->
+          <div class="col-xs-12 col-md-3 mt-4">
+            <h6>Contact</h6>
+            <hr>
+            <!-- Location -->
+            <div class="d-flex flex-row justify-content-start align-items-start mt-3">
+              <div class="footer-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <p class="ms-2 fs-6">
+                Department of Computer Science<br />
+                Nguyen Engineering Building<br />
+                4400 University Drive <br />
+                Fairfax, VA 22030
+              </p>
+            </div>
+            <!-- Phone number -->
+            <div class="d-flex flex-row justify-content-start align-items-start mt-3">
+              <div class="footer-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <a href="tel:7039931530" class="ms-2 fs-6 text-decoration-none text-white">
+                703-993-1530 (P)
+              </a>
+            </div>
+            <!-- Fax number -->
+            <div class="d-flex flex-row justify-content-start align-items-start mt-1">
+              <div class="footer-icon">
+                <i class="bi bi-printer"></i>
+              </div>
+              <a href="javascript:void(0);" class="ms-2 fs-6 text-decoration-none text-white">
+                703-993-1710 (F)
+              </a>
+            </div>
+          </div>
+          <!-- Social media links -->
+          <div class="col-xs-12 col-md-3 offset-md-2 mt-4">
+            <h6>Follow us @</h6>
+            <hr>
+            <div class="d-flex flex-row justify-content-start align-items-start mt-3">
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/masoncec/" class="social-media-icon">
+                <i class="bi bi-facebook fs-3"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/mason_cec/" class="social-media-icon">
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+              <!-- Twitter -->
+              <a href="https://twitter.com/mason_cec" class="social-media-icon">
+                <i class="bi bi-twitter fs-3"></i>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/school/george-mason-university-college-of-engineering-and-computing/"
+                class="social-media-icon">
+                <i class="bi bi-linkedin fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Top Button -->
+      <!-- Takes the user to the top of the page -->
+      <div class="position-absolute bottom-0 end-0 m-3 to-top-btn-container">
+        <button type="button" onclick="toTop()" class="btn btn-outline-light to-top-btn text-center rounded-circle">
+          <i class="bi bi-caret-up"></i>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="./js/scripts.js" defer></script>
+  <!-- Bootstrap javascript link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

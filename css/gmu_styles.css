@@ -1,0 +1,197 @@
+:root {
+    --gmu-c-green: #006633;
+    --gmu-c-yellow: #ffcc33;
+    --gmu-c-green-light: #0066331a;
+    --gmu-c-yellow-light: #ffcc3340;
+
+    --gmu-c-green-hover: #006633cc;
+    --gmu-c-green-disabled: #00663380;
+
+    --c-facebook: #3b5998;
+    --c-instagram: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    --c-twitter: #26a7de;
+    --c-linkedin: #0071b1;
+
+    scroll-padding-top: 125px;
+}
+
+.btn-brand {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--gmu-c-green);
+    --bs-btn-border-color: var(--gmu-c-green);
+    --bs-btn-hover-bg: var(--gmu-c-green-hover);
+    --bs-btn-hover-border-color: var(--gmu-c-green);
+    --bs-btn-focus-shadow-rgb: 0, 102, 51;
+    --bs-btn-active-bg: var(--gmu-c-green);
+    --bs-btn-active-border-color: var(--gmu-c-green);
+    --bs-btn-disabled-bg: var(--gmu-c-green-disabled);
+    --bs-btn-disabled-border-color: var(--gmu-c-green-disabled);
+}
+
+.btn-outline-brand {
+    --bs-btn-color: var(--gmu-c-green);
+    --bs-btn-border-color: var(--gmu-c-green);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--gmu-c-green-hover);
+    --bs-btn-hover-border-color: var(--gmu-c-green-hover);
+    --bs-btn-focus-shadow-rgb: 0, 102, 51;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--gmu-c-green);
+    --bs-btn-active-border-color: var(--gmu-c-green);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--gmu-c-green-disabled);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--gmu-c-green-disabled);
+    --bs-gradient: none;
+}
+
+.bg-gmu-green {
+    background-color: var(--gmu-c-green);
+}
+
+.gmu-green {
+    color: var(--gmu-c-green);
+}
+
+.bg-gmu-yellow {
+    background-color: var(--gmu-c-yellow);
+}
+
+.gmu-yellow {
+    color: var(--gmu-c-yellow);
+}
+
+.gmu-cs-dept .banner {
+    border: 5px solid var(--gmu-c-green);
+}
+
+.gmu-cs-dept .header img.logo-short {
+    width: 2rem;
+    aspect-ratio: 1/1;
+    position: relative;
+    top: -6px;
+}
+
+.gmu-cs-dept h1,
+.gmu-cs-dept h2,
+.gmu-cs-dept h3,
+.gmu-cs-dept h4 {
+    color: var(--gmu-c-green);
+}
+
+.gmu-cs-dept #navbar .nav-link.active {
+    border-bottom: 5px solid var(--gmu-c-green);
+    border-radius: 5px;
+}
+
+.breadcrumb-item > a {
+    color: var(--gmu-c-green);
+}
+
+.footer-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.footer-icon > i {
+    position: relative;
+    top: -2px;
+}
+
+.social-media-icon {
+    cursor: pointer;
+}
+.social-media-icon:not(:last-of-type) {
+    margin-right: 1.5rem;
+}
+.social-media-icon > .bi-facebook {
+    color: var(--c-facebook);
+}
+.social-media-icon > .bi-instagram {
+    color: var(--c-instagram);
+    background: var(--c-instagram);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-media-icon > .bi-twitter {
+    color: var(--c-twitter);
+}
+.social-media-icon > .bi-linkedin {
+    color: var(--c-linkedin);
+}
+.to-top-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.to-top-btn > i {
+    position: relative;
+    top: -3px;
+}
+
+.survey-form
+    .form-field:has(
+        .form-control[required],
+        .form-select[required],
+        .form-check-input[required] .required
+    )
+    .form-label:after {
+    content: "*";
+    color: var(--bs-danger);
+    margin-left: 0.25rem;
+}
+
+.survey-form .form-control:focus,
+.survey-form .form-select:focus,
+.survey-form .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem var(--gmu-c-green-light);
+    border-color: var(--gmu-c-green);
+}
+
+.survey-form .form-check-input:checked {
+    background-color: var(--gmu-c-green);
+    border-color: var(--gmu-c-green);
+}
+
+form.survey-form.was-validated:has(:invalid) button[type="submit"].btn-brand {
+    pointer-events: none;
+    cursor: disabled;
+
+    --bs-btn-bg: var(--gmu-c-green-disabled);
+    --bs-btn-border-color: var(--gmu-c-green-disabled);
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 1.25rem;
+    background-color: white;
+    margin-inline: 1rem;
+}
+
+.gmu-cs-dept .dropdown-menu {
+    --bs-dropdown-padding-x: 0.25rem;
+    --bs-dropdown-padding-y: 0.25rem;
+    --bs-dropdown-min-width: 5rem;
+    --bs-dropdown-spacer: 0.5rem;
+    --bs-dropdown-link-hover-color: black;
+    --bs-dropdown-link-active-color: black;
+    --bs-dropdown-link-hover-bg: var(--gmu-c-yellow-light);
+    --bs-dropdown-link-active-bg: var(--gmu-c-yellow);
+}
+
+@media only screen and (min-width: 768px) {
+    aside.degrees-list {
+        position: fixed;
+    }
+
+    footer .to-top-btn-container {
+        margin: 3rem !important;
+    }
+}
