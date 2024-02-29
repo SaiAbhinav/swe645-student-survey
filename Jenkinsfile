@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        registry = "saiabhinavvasepalli/student-survey-amd64"
+        registry = "saiabhinavvasepalli/student-survey"
         registryCredential = 'dockerhub'
     }
     stages {
@@ -37,8 +37,8 @@ pipeline {
             steps {
                 echo 'Deploying to a node in Rancher and Load Balancer'
                 script {
-                    sh "kubectl set image deployment/deploy container-0=${registry}:${env.dateTag}"
-                    sh "kubectl set image deployment/deploylb container-0=${registry}:${env.dateTag}"
+                    sh "kubectl set image deployment/nodeport container-0=${registry}:${env.dateTag}"
+                    sh "kubectl set image deployment/loadbalancer container-0=${registry}:${env.dateTag}"
                 }
             }
         }
