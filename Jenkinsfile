@@ -8,7 +8,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 script {
-                    env.dateTag = new Date().format("yyyyMMdd-HHmmss")
+                    env.dateTag = new Date().format("MM-dd-yyyy-HHmmss")
                 }
             }
         }
@@ -37,8 +37,7 @@ pipeline {
             steps {
                 echo 'Deploying to a node in Rancher and Load Balancer'
                 script {
-                    sh "kubectl set image deployment/nodeport container-0=${registry}:${env.dateTag}"
-                    sh "kubectl set image deployment/loadbalancer container-0=${registry}:${env.dateTag}"
+                    sh "kubectl set image deployment/survey-deployment survey=${registry}:${env.dateTag}"
                 }
             }
         }
